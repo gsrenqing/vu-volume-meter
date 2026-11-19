@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity version="3.6.9.0" name="VUMeter" />
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+      <requestedPrivileges>
+        <!-- 普通用户权限运行，避免被杀毒/系统按"可能提权"加重判定 -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Windows 10 / 11 -->
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
+    </application>
+  </compatibility>
+  <!-- v3.6.1：删除 PerMonitorV2 DPI 声明，回退到 Main() 中的 SetProcessDPIAware()（System DPI Aware），
+       避免 PerMonitorV2 下窗口消息循环被 DWM 同步阻塞导致的卡顿（CPU 占用低但画面顿） -->
+</assembly>
