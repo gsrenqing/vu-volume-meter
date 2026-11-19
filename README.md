@@ -1,10 +1,51 @@
-# VU 音量表（VU Widgets）
+# VU Volume Meter (VU Widgets)
+
+A Windows desktop widget **VU level meter** that displays system output and microphone volume in real time. It supports multiple dials, mic gain, true mute, and restoration after monitor hot-plug / reconnection.
+
+- Version: **v3.6.9** (built 2026-11-18)
+- Runtime: Windows 10 / 11 (.NET Framework 4.x)
+- Stack: C# / WinForms; audio capture via [NAudio](https://github.com/naudio/NAudio)
+
+## Repository Layout
+
+```
+├─ 源码/            # C# sources, icons & layer assets, NAudio.dll, compile.rsp
+├─ 成品/            # Compiled VU Widgets v3.6.9.exe
+├─ 验证截图/        # Acceptance screenshots for each state
+├─ 3.6.9升级说明.md # Change log & acceptance notes for this version
+├─ LICENSE          # GPL-3.0
+└─ README.md
+```
+
+## Build from Source
+
+Use the .NET Framework built-in `csc.exe` (no Visual Studio required):
+
+```powershell
+cd 源码
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe @compile.rsp
+```
+
+The output is `VU Widgets v3.6.9.exe`.
+
+## Run
+
+Double-click `成品\VU Widgets v3.6.9.exe`. Before removing the program, use the widget's right-click menu to close it and clear its configuration so no system residue remains.
+
+## Credits
+
+- Audio capture: NAudio (MIT)
+- Dial artwork references the Coolfish Desktop / XWidgets style
+
+## License
+
+This project is open-sourced under **GPL-3.0**; see [LICENSE](LICENSE). For non-commercial study and testing only. The author is not liable for any issues arising from its use and does not commit to future upgrades.
+
+---
+
+# 中文说明
 
 一款 Windows 桌面挂件式 **VU 电平表**，实时显示系统输出与麦克风音量，支持多表盘、Mic 增益、真静音与多显示器拔插重连还原。
-
-- 当前版本：**v3.6.9**（构建于 2026-11-18）
-- 运行环境：Windows 10 / 11（.NET Framework 4.x）
-- 技术栈：C# / WinForms，音频采集依赖 [NAudio](https://github.com/naudio/NAudio)
 
 ## 目录结构
 
