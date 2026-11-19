@@ -11,7 +11,6 @@ A Windows desktop widget **VU level meter** that displays system output and micr
 ```
 ├─ 源码/            # C# sources, icons & layer assets, NAudio.dll, compile.rsp
 ├─ 成品/            # Compiled VU Widgets v3.6.9.exe
-├─ 验证截图/        # Acceptance screenshots for each state
 ├─ 3.6.9升级说明.md # Change log & acceptance notes for this version
 ├─ LICENSE          # GPL-3.0
 └─ README.md
@@ -52,7 +51,6 @@ This project is open-sourced under **GPL-3.0**; see [LICENSE](LICENSE). For non-
 ```
 ├─ 源码/            # C# 源码、图标与图层素材、NAudio.dll、编译响应文件 compile.rsp
 ├─ 成品/            # 已编译的 VU Widgets v3.6.9.exe
-├─ 验证截图/        # 各状态验收截图
 ├─ 3.6.9升级说明.md # 本版本改动与验收记录
 ├─ LICENSE          # GPL-3.0
 └─ README.md
